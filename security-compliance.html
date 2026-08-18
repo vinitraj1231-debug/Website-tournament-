@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Security & Compliance - BOOYAH SPORTS | Enterprise Protection</title>
+  <meta name="description" content="Explore BOOYAH SPORTS Security Architecture. 256-bit SSL encryption, NPCI/UPI compliance, Server-Side Anti-Cheat, and IT Act compliance.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://booyahsports.in/security-compliance.html">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Orbitron:wght@600;800;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    :root {
+      --bg-dark: #0c0817;
+      --card-bg: rgba(24, 17, 46, 0.75);
+      --card-border: rgba(157, 38, 255, 0.25);
+      --primary-purple: #9d26ff;
+      --secondary-cyan: #00f0ff;
+      --lavender: #c084fc;
+      --text-main: #f1f5f9;
+      --text-muted: #94a3b8;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Outfit', sans-serif; }
+    body { background-color: var(--bg-dark); color: var(--text-main); line-height: 1.7; background-image: radial-gradient(circle at 10% 20%, rgba(157, 38, 255, 0.12) 0%, transparent 40%), radial-gradient(circle at 90% 80%, rgba(0, 240, 255, 0.08) 0%, transparent 40%); background-attachment: fixed; padding-bottom: 60px; }
+    .navbar { position: sticky; top: 0; z-index: 1000; background: rgba(12, 8, 23, 0.85); backdrop-filter: blur(12px); border-bottom: 1px solid var(--card-border); padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; }
+    .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: #fff; }
+    .brand img { width: 42px; height: 42px; border-radius: 10px; border: 2px solid var(--primary-purple); box-shadow: 0 0 15px rgba(157, 38, 255, 0.4); }
+    .brand-title { font-family: 'Orbitron', sans-serif; font-weight: 800; font-size: 1.3rem; background: linear-gradient(135deg, #fff 30%, var(--lavender) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: 1px; }
+    .nav-btn { display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg, var(--primary-purple), #791bd9); color: #fff; padding: 0.6rem 1.2rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.9rem; box-shadow: 0 0 15px rgba(157, 38, 255, 0.4); transition: all 0.3s ease; }
+    .nav-btn:hover { transform: translateY(-2px); box-shadow: 0 0 25px rgba(157, 38, 255, 0.7); }
+    .container { max-width: 1000px; margin: 40px auto; padding: 0 20px; }
+    .header-card { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 20px; padding: 40px; backdrop-filter: blur(10px); margin-bottom: 30px; position: relative; overflow: hidden; }
+    .header-card::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: linear-gradient(90deg, var(--primary-purple), var(--secondary-cyan)); }
+    .badge { display: inline-flex; align-items: center; gap: 6px; background: rgba(0, 240, 255, 0.1); border: 1px solid rgba(0, 240, 255, 0.3); color: var(--secondary-cyan); padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; margin-bottom: 15px; }
+    h1 { font-family: 'Orbitron', sans-serif; font-size: 2.2rem; margin-bottom: 10px; color: #fff; }
+    .meta-text { color: var(--text-muted); font-size: 0.9rem; display: flex; gap: 20px; flex-wrap: wrap; }
+    .content-box { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 16px; padding: 35px; margin-bottom: 25px; backdrop-filter: blur(10px); }
+    h2 { font-family: 'Rajdhani', sans-serif; font-size: 1.6rem; color: var(--lavender); margin-top: 25px; margin-bottom: 12px; display: flex; align-items: center; gap: 10px; }
+    p, li { color: var(--text-muted); margin-bottom: 12px; font-size: 1rem; }
+    ul { padding-left: 20px; margin-bottom: 15px; }
+    li { margin-bottom: 8px; }
+    strong { color: #fff; }
+    .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin: 25px 0; }
+    .feature-card { background: rgba(157, 38, 255, 0.05); border: 1px solid var(--card-border); border-radius: 12px; padding: 20px; }
+    .feature-card h3 { color: var(--secondary-cyan); font-family: 'Rajdhani', sans-serif; font-size: 1.2rem; margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
+    footer { border-top: 1px solid var(--card-border); padding: 30px 20px; text-align: center; color: var(--text-muted); font-size: 0.9rem; margin-top: 60px; }
+    footer a { color: var(--lavender); text-decoration: none; margin: 0 10px; }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://booyahsports.in" },
+      { "@type": "ListItem", "position": 2, "name": "Security & Compliance", "item": "https://booyahsports.in/security-compliance.html" }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="index.html" class="brand">
+      <img src="assets/logo.jpg" alt="BOOYAH SPORTS Logo">
+      <span class="brand-title">BOOYAH SPORTS</span>
+    </a>
+    <a href="index.html" class="nav-btn">
+      <i data-lucide="arrow-left" style="width:18px;height:18px;"></i> Back to Home
+    </a>
+  </nav>
+
+  <div class="container">
+    <div class="header-card">
+      <div class="badge">
+        <i data-lucide="lock" style="width:16px;height:16px;"></i> Cyber Security Framework
+      </div>
+      <h1>Security & Technical Compliance</h1>
+      <div class="meta-text">
+        <span><i data-lucide="shield" style="width:14px;height:14px;display:inline;"></i> AES-256 Vault</span>
+        <span><i data-lucide="server" style="width:14px;height:14px;display:inline;"></i> Cloudflare DDOS Shield</span>
+        <span><i data-lucide="check-circle" style="width:14px;height:14px;display:inline;"></i> NPCI UPI Verified</span>
+      </div>
+    </div>
+
+    <div class="content-box">
+      <p>At <strong>BOOYAH SPORTS</strong>, player security, transactional integrity, and data protection form the foundation of our gaming engine. We implement military-grade encryption and real-time threat intelligence to protect 100,000+ esports gamers in India.</p>
+
+      <div class="grid-2">
+        <div class="feature-card">
+          <h3><i data-lucide="lock" style="width:20px;height:20px;"></i> TLS 1.3 & AES Encryption</h3>
+          <p>All network calls between the Android APK and cloud database servers are secured with TLS 1.3 protocol and AES-256 bits payload encryption.</p>
+        </div>
+        <div class="feature-card">
+          <h3><i data-lucide="credit-card" style="width:20px;height:20px;"></i> NPCI / RBI Compliance</h3>
+          <p>Instant UPI payouts run through PCI-DSS Level 1 compliant gateway partners, safeguarding user financial data without storing CVVs or PINs.</p>
+        </div>
+        <div class="feature-card">
+          <h3><i data-lucide="bot-off" style="width:20px;height:20px;"></i> Anti-DDoS & Firewall</h3>
+          <p>Enterprise Cloudflare protection mitigates volumetric DDoS attacks, automated bot registration spam, and unauthorized API probing.</p>
+        </div>
+        <div class="feature-card">
+          <h3><i data-lucide="crosshair" style="width:20px;height:20px;"></i> AI Anti-Cheat Engine</h3>
+          <p>Proprietary spectral match verification audits kill timestamps and placement logs to permanently purge hackers and modded client accounts.</p>
+        </div>
+      </div>
+
+      <h2><i data-lucide="file-check" style="color:var(--secondary-cyan);"></i> Information Security Management</h2>
+      <p>Our infrastructure follows ISO/IEC 27001 guidelines for information security management systems (ISMS):</p>
+      <ul>
+        <li><strong>Role-Based Access Control (RBAC):</strong> Admin dashboard access requires multi-factor authentication (MFA) and strict IP Whitelisting.</li>
+        <li><strong>Zero Data Monitization:</strong> User metrics, phone numbers, and match records are never monetized or exposed to ad networks.</li>
+        <li><strong>Vulnerability Disclosure Program:</strong> Ethical hackers and security researchers can report vulnerabilities to <code>security@booyahsports.in</code> for bounty review.</li>
+      </ul>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 BOOYAH SPORTS Technologies. All rights reserved.</p>
+    <p style="margin-top:8px;">
+      <a href="index.html">Home</a> |
+      <a href="privacy-policy.html">Privacy Policy</a> |
+      <a href="terms-of-service.html">Terms of Service</a> |
+      <a href="security-compliance.html">Security</a> |
+      <a href="fair-play-anti-cheat.html">Fair Play</a> |
+      <a href="disclaimer.html">Disclaimer</a> |
+      <a href="contact-support.html">Contact Us</a>
+    </p>
+  </footer>
+
+  <script>lucide.createIcons();</script>
+</body>
+</html>

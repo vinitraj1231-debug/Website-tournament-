@@ -1,0 +1,8 @@
+127.0.0.1 - - [18/Aug/2026 10:22:35] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [18/Aug/2026 10:22:35] "GET /assets/logo.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [18/Aug/2026 10:22:35] "GET /assets/app_home.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [18/Aug/2026 10:22:35] "GET /assets/app_matches.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [18/Aug/2026 10:22:35] "GET /assets/app_tournaments.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [18/Aug/2026 10:22:35] "GET /assets/app_wallet.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [18/Aug/2026 10:22:35] "GET /assets/app_profile.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [18/Aug/2026 10:22:35] "GET /assets/app_support.jpg HTTP/1.1" 200 -

@@ -33,13 +33,29 @@
   <!-- Google Fonts: Orbitron, Rajdhani, Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@500;700;800;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Orbitron:wght@600;700;800;900&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet">
 
   <!-- Schema.org JSON-LD Structured Data for SoftwareApplication & FAQPage -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@graph": [
+      {
+        "@type": "Organization",
+        "name": "BOOYAH SPORTS Technologies",
+        "url": "https://booyahsports.in",
+        "logo": "https://booyahsports.in/assets/logo.jpg",
+        "sameAs": [
+          "https://t.me/BooyahSportsOfficial"
+        ],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "email": "support@booyahsports.in",
+          "contactType": "customer service",
+          "areaServed": "IN",
+          "availableLanguage": ["en", "hi"]
+        }
+      },
       {
         "@type": "SoftwareApplication",
         "name": "BOOYAH SPORTS",
@@ -113,7 +129,7 @@
       --live-red: #ff2660;
       --font-heading: 'Orbitron', sans-serif;
       --font-subheading: 'Rajdhani', sans-serif;
-      --font-body: 'Inter', sans-serif;
+      --font-body: 'Outfit', sans-serif;
     }
 
     * {
@@ -1031,7 +1047,144 @@
       }
     }
 
+
+    /* ANIMATED ICON STYLES */
+    .icon-pulse {
+      animation: iconPulse 2s infinite ease-in-out;
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    .icon-bounce {
+      animation: iconBounce 2s infinite ease-in-out;
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    .animated-icon-spin {
+      animation: iconSpin 8s linear infinite;
+      color: var(--neon-cyan);
+    }
+
+    .animated-icon-glow {
+      animation: iconGlow 2s infinite alternate;
+      color: var(--primary-purple);
+    }
+
+    .animated-icon-pulse {
+      animation: iconPulse 1.5s infinite ease-in-out;
+      color: #10b981;
+    }
+
+    @keyframes iconPulse {
+      0%, 100% { transform: scale(1); filter: drop-shadow(0 0 2px rgba(157, 38, 255, 0.5)); }
+      50% { transform: scale(1.15); filter: drop-shadow(0 0 8px rgba(0, 240, 255, 0.9)); }
+    }
+
+    @keyframes iconBounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-4px); }
+    }
+
+    @keyframes iconSpin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    @keyframes iconGlow {
+      0% { filter: drop-shadow(0 0 2px var(--primary-purple)); }
+      100% { filter: drop-shadow(0 0 12px var(--neon-cyan)); }
+    }
+
+
+    /* PHONE FRAME & SHOWCASE STYLES */
+    .phone-frame-container {
+      position: relative;
+      width: 290px;
+      height: 580px;
+      background: #000;
+      border-radius: 40px;
+      border: 4px solid #3b2a68;
+      box-shadow: 0 0 35px rgba(157, 38, 255, 0.6), inset 0 0 10px rgba(0,0,0,0.8);
+      overflow: hidden;
+      margin: 0 auto;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .phone-frame-container:hover {
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 0 0 50px rgba(0, 240, 255, 0.8), 0 0 20px rgba(157, 38, 255, 0.9);
+      border-color: var(--neon-cyan);
+    }
+
+    .phone-notch {
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 90px;
+      height: 18px;
+      background: #000;
+      border-radius: 10px;
+      z-index: 10;
+    }
+
+    .phone-screen-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .gallery-grid-6 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .app-card-showcase {
+      background: rgba(24, 17, 46, 0.75);
+      border: 1px solid rgba(157, 38, 255, 0.25);
+      border-radius: 20px;
+      padding: 24px;
+      text-align: center;
+      backdrop-filter: blur(10px);
+      transition: all 0.3s ease;
+    }
+
+    .app-card-showcase:hover {
+      border-color: var(--neon-cyan);
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(157, 38, 255, 0.3);
+    }
+
+    .mini-phone-frame {
+      position: relative;
+      width: 220px;
+      height: 440px;
+      background: #000;
+      border-radius: 30px;
+      border: 3px solid #3b2a68;
+      box-shadow: 0 0 20px rgba(157, 38, 255, 0.4);
+      overflow: hidden;
+      margin: 0 auto 18px auto;
+    }
+
+    .app-card-caption h4 {
+      font-family: var(--font-subheading);
+      font-size: 1.15rem;
+      color: #fff;
+      margin-bottom: 6px;
+    }
+
+    .app-card-caption p {
+      font-size: 0.88rem;
+      color: var(--soft-lavender);
+    }
+
   </style>
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
 
@@ -1052,7 +1205,7 @@
 
       <div class="nav-actions">
         <a href="#download" class="btn-glow nav-dl-btn">
-          ⚡ DOWNLOAD APK
+          <i data-lucide="zap" class="icon-pulse"></i> DOWNLOAD APK
         </a>
         <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu">
           <span></span>
@@ -1065,14 +1218,14 @@
     <!-- Mobile Drawer Menu -->
     <div class="mobile-drawer" id="mobileDrawer">
       <ul class="mobile-nav-links">
-        <li><a href="#features" class="mobile-nav-link">✨ Features</a></li>
-        <li><a href="#tournaments" class="mobile-nav-link">🔥 Tournaments</a></li>
-        <li><a href="#app-preview" class="mobile-nav-link">📱 App Preview</a></li>
-        <li><a href="#faq" class="mobile-nav-link">❓ FAQ & Support</a></li>
+        <li><a href="#features" class="mobile-nav-link"><i data-lucide="sparkles"></i> Features</a></li>
+        <li><a href="#tournaments" class="mobile-nav-link"><i data-lucide="flame" class="icon-pulse"></i> Tournaments</a></li>
+        <li><a href="#app-preview" class="mobile-nav-link"><i data-lucide="smartphone"></i> App Preview</a></li>
+        <li><a href="#faq" class="mobile-nav-link"><i data-lucide="help-circle"></i> FAQ & Support</a></li>
       </ul>
       <div class="mobile-drawer-cta">
         <a href="#download" class="btn-glow mobile-drawer-btn">
-          ⚡ DOWNLOAD BOOYAH SPORTS APK (v1.0)
+          <i data-lucide="download-cloud" class="icon-bounce"></i> DOWNLOAD BOOYAH SPORTS APK (v1.0)
         </a>
       </div>
     </div>
@@ -1089,7 +1242,7 @@
         </div>
       </div>
       <a href="#download" class="btn-glow btn-sticky-download">
-        ⚡ DOWNLOAD
+        <i data-lucide="zap" class="icon-pulse"></i> DOWNLOAD
       </a>
     </div>
   </div>
@@ -1118,23 +1271,29 @@
             <p>Won & Withdrawn</p>
           </div>
           <div class="stat-card">
-            <h3>4.8 ★</h3>
+            <h3>4.8 <i data-lucide="star" style="width:16px;height:16px;fill:#ffc107;color:#ffc107;display:inline;"></i></h3>
             <p>Gamer Rating</p>
           </div>
         </div>
 
         <div style="display: flex; gap: 15px; flex-wrap: wrap;">
           <a href="#download" class="btn-glow" style="padding: 16px 36px; font-size: 1.1rem;">
-            📲 DOWNLOAD APK (v1.0)
+            <i data-lucide="download" class="icon-bounce"></i> DOWNLOAD APK (v1.0)
           </a>
           <a href="#tournaments" class="btn-secondary">
-            🎮 View Scrims
+            <i data-lucide="gamepad-2"></i> View Scrims
           </a>
         </div>
       </div>
 
       <div class="hero-mockup-wrapper">
-        <img src="assets/mockup_hero.svg" alt="BOOYAH SPORTS App Mockup" class="hero-mockup-img">
+
+        <div class="phone-frame-container">
+          <div class="phone-notch"></div>
+          <img src="assets/app_home.jpg" alt="BOOYAH SPORTS Android App Home Dashboard Screen" class="phone-screen-img">
+          <div class="phone-reflection"></div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -1149,25 +1308,25 @@
 
       <div class="features-grid">
         <div class="feature-card">
-          <div class="feature-icon">🤖</div>
+          <div class="feature-icon"><i data-lucide="bot" class="animated-icon-spin"></i></div>
           <h3>AUTOMATED ROOM ID/PASS</h3>
           <p>No waiting in WhatsApp or Discord groups! Get custom room credentials pushed directly inside the app 15 minutes before the match.</p>
         </div>
 
         <div class="feature-card">
-          <div class="feature-icon">⚡</div>
+          <div class="feature-icon"><i data-lucide="zap" class="animated-icon-glow"></i></div>
           <h3>INSTANT 24x7 WITHDRAWALS</h3>
           <p>Withdraw your prize earnings instantly to your UPI ID, Paytm Wallet, PhonePe, or Google Pay account in under 60 seconds.</p>
         </div>
 
         <div class="feature-card">
-          <div class="feature-icon">🛡️</div>
+          <div class="feature-icon"><i data-lucide="shield-check" class="animated-icon-pulse"></i></div>
           <h3>100% ANTI-CHEAT SHIELD</h3>
           <p>Strict server-side monitoring, spectator verification, and anti-hack algorithms ensure a clean, competitive environment for all.</p>
         </div>
 
         <div class="feature-card">
-          <div class="feature-icon">🎯</div>
+          <div class="feature-icon"><i data-lucide="crosshair" class="animated-icon-spin"></i></div>
           <h3>MULTIPLE MATCH FORMATS</h3>
           <p>Choose from Clash Squad 4v4, Full Map Battle Royale (Solo/Duo/Squad), and Daily Pro Scrims with low entry fees & huge prize pools.</p>
         </div>
@@ -1275,22 +1434,81 @@
   <section id="app-preview" class="gallery-section">
     <div class="container">
       <div class="section-title-area">
-        <p>SLEEK & INTUITIVE UI</p>
+        <p>HIGH PERFORMANCE ANDROID APP</p>
         <h2>INSIDE BOOYAH SPORTS</h2>
       </div>
 
-      <div class="gallery-grid">
-        <div class="gallery-item">
-          <img src="assets/app_screen1.svg" alt="Free Fire Tournament Lobby UI">
-          <div class="gallery-caption">Tournament Match Lobby</div>
+      <div class="gallery-grid-6">
+        <!-- App Screen 1 -->
+        <div class="app-card-showcase">
+          <div class="mini-phone-frame">
+            <div class="phone-notch"></div>
+            <img src="assets/app_home.jpg" alt="Home Dashboard - BOOYAH SPORTS" class="phone-screen-img">
+          </div>
+          <div class="app-card-caption">
+            <h4><i data-lucide="layout-dashboard" style="width:16px;height:16px;display:inline;color:var(--secondary-cyan);"></i> Main Dashboard</h4>
+            <p>Live wallet balance, upcoming scrims & instant join buttons.</p>
+          </div>
         </div>
-        <div class="gallery-item">
-          <img src="assets/app_screen2.svg" alt="Clash Squad 4v4 Match UI">
-          <div class="gallery-caption">Clash Squad Custom Rooms</div>
+
+        <!-- App Screen 2 -->
+        <div class="app-card-showcase">
+          <div class="mini-phone-frame">
+            <div class="phone-notch"></div>
+            <img src="assets/app_matches.jpg" alt="Match Lobby - BOOYAH SPORTS" class="phone-screen-img">
+          </div>
+          <div class="app-card-caption">
+            <h4><i data-lucide="crosshair" style="width:16px;height:16px;display:inline;color:var(--secondary-cyan);"></i> Custom Scrim Lobbies</h4>
+            <p>Clash Squad 4v4 & BR Full Map matches with live room codes.</p>
+          </div>
         </div>
-        <div class="gallery-item">
-          <img src="assets/app_screen3.svg" alt="Instant UPI Wallet Payout UI">
-          <div class="gallery-caption">Instant UPI Wallet Payouts</div>
+
+        <!-- App Screen 3 -->
+        <div class="app-card-showcase">
+          <div class="mini-phone-frame">
+            <div class="phone-notch"></div>
+            <img src="assets/app_tournaments.jpg" alt="Tournaments & Scrims - BOOYAH SPORTS" class="phone-screen-img">
+          </div>
+          <div class="app-card-caption">
+            <h4><i data-lucide="trophy" style="width:16px;height:16px;display:inline;color:var(--secondary-cyan);"></i> Pro Tournament Hub</h4>
+            <p>High-tier weekly esports leagues with big cash prizes.</p>
+          </div>
+        </div>
+
+        <!-- App Screen 4 -->
+        <div class="app-card-showcase">
+          <div class="mini-phone-frame">
+            <div class="phone-notch"></div>
+            <img src="assets/app_wallet.jpg" alt="Instant UPI Wallet - BOOYAH SPORTS" class="phone-screen-img">
+          </div>
+          <div class="app-card-caption">
+            <h4><i data-lucide="wallet" style="width:16px;height:16px;display:inline;color:var(--secondary-cyan);"></i> Instant UPI Wallet</h4>
+            <p>Withdraw winnings in 60 seconds via UPI, Paytm, or PhonePe.</p>
+          </div>
+        </div>
+
+        <!-- App Screen 5 -->
+        <div class="app-card-showcase">
+          <div class="mini-phone-frame">
+            <div class="phone-notch"></div>
+            <img src="assets/app_profile.jpg" alt="Gamer Profile - BOOYAH SPORTS" class="phone-screen-img">
+          </div>
+          <div class="app-card-caption">
+            <h4><i data-lucide="user-check" style="width:16px;height:16px;display:inline;color:var(--secondary-cyan);"></i> Verified Gamer Profile</h4>
+            <p>Track kill stats, match history & level progression.</p>
+          </div>
+        </div>
+
+        <!-- App Screen 6 -->
+        <div class="app-card-showcase">
+          <div class="mini-phone-frame">
+            <div class="phone-notch"></div>
+            <img src="assets/app_support.jpg" alt="24x7 Helpdesk - BOOYAH SPORTS" class="phone-screen-img">
+          </div>
+          <div class="app-card-caption">
+            <h4><i data-lucide="headphones" style="width:16px;height:16px;display:inline;color:var(--secondary-cyan);"></i> 24x7 In-App Support</h4>
+            <p>Dedicated ticket desk for match queries & instant resolution.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -1300,7 +1518,7 @@
   <section class="hinglish-promo-section">
     <div class="container">
       <div class="hinglish-box">
-        <h3>🔥 APNA GAME. APNA CASH. BOOYAH SPORTS PAR BOOYAH KARO!</h3>
+        <h3><i data-lucide="flame" style="color:#ff2660;display:inline;"></i> APNA GAME. APNA CASH. BOOYAH SPORTS PAR BOOYAH KARO!</h3>
         <p>
           Bhai log! Maharashtra, UP, Bihar, WB se le kar Delhi NCR aur South tak—sabhi Free Fire MAX players ke liye ultimate tournament app aa gaya hai. Daily Custom Rooms khelo, Booyah maro, aur instant cash direct account me pao!
         </p>
@@ -1360,7 +1578,7 @@
       <h2>READY TO DOMINATE THE FREE FIRE MAX ARENA?</h2>
       <p>Download BOOYAH SPORTS APK v1.0 now & get ₹20 Free Sign-Up Bonus!</p>
       <a href="assets/BooyahSports_v1.0.apk" class="btn-glow" style="padding: 18px 45px; font-size: 1.25rem;">
-        ⚡ DOWNLOAD BOOYAH SPORTS APK NOW (v1.0)
+        <i data-lucide="zap" class="icon-pulse"></i> DOWNLOAD BOOYAH SPORTS APK NOW (v1.0)
       </a>
     </div>
   </section>
@@ -1384,6 +1602,18 @@
             <li><a href="#tournaments">Live Scrims</a></li>
             <li><a href="#app-preview">App Screenshots</a></li>
             <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>LEGAL & SECURITY</h4>
+          <ul>
+            <li><a href="privacy-policy.html"><i data-lucide="shield" style="width:13px;height:13px;display:inline;"></i> Privacy Policy</a></li>
+            <li><a href="terms-of-service.html"><i data-lucide="file-text" style="width:13px;height:13px;display:inline;"></i> Terms of Service</a></li>
+            <li><a href="security-compliance.html"><i data-lucide="lock" style="width:13px;height:13px;display:inline;"></i> Security & Compliance</a></li>
+            <li><a href="fair-play-anti-cheat.html"><i data-lucide="crosshair" style="width:13px;height:13px;display:inline;"></i> Fair Play</a></li>
+            <li><a href="disclaimer.html"><i data-lucide="alert-circle" style="width:13px;height:13px;display:inline;"></i> Disclaimer</a></li>
+            <li><a href="contact-support.html"><i data-lucide="headphones" style="width:13px;height:13px;display:inline;"></i> Contact Support</a></li>
           </ul>
         </div>
 
@@ -1466,5 +1696,6 @@
     });
 
   </script>
+  <script>lucide.createIcons();</script>
 </body>
 </html>
